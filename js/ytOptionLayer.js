@@ -7,19 +7,20 @@ var ytOptionLayer = (function () {
 		s.placeIndex = 0;
 
 		s.carInfoList = [
-			{name : "BMW", data : 0},
-			{name : "FORD", data : 1},
-			{name : "LAMBORGHINI", data : 2},
-			{name : "PAGANI", data : 4}
+			{name : "Oscar", data : 0},
+			{name : "Loki", data : 1},
+			{name : "Cubano", data : 2},
+			{name : "Superman", data : 4}
 		];
 
 		s.placeInfoList = [
-			{name : "CANYON", data : "street_canyon"},
-			{name : "CITY", data : "street_city"},
-			{name : "DESERT", data : "street_desert"},
-			{name : "PRAIRIE", data : "street_grass"},
-			{name : "ICEFIELD", data : "street_snow"},
-			{name : "BRIDGE", data : "street_water"}
+			{name : "BOGOTA", data : "street_city"},
+			{name : "VILLAVO", data : "street_canyon"},
+			
+			{name : "MAICAO", data : "street_desert"},
+			{name : "VIA AL LLANO", data : "street_grass"},
+			{name : "TUNJA", data : "street_snow"},
+			{name : "GUADUAS", data : "street_water"}
 		];
 
 		var backgroundBmp = new LBitmap(dataList["default_menu_background"]);

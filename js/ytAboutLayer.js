@@ -28,13 +28,11 @@ var ytAboutLayer = (function () {
 		txtTemplate.color = "white";
 
 		var txtList = [
-			"A: I wonder who the programmer of this game is?",
-			"Y: Me, I'm Yuehao.",
-			"A: Ok, where is the material from?",
-			"Y: To be honest, the material is from the Internet. I think I need to say 'thanks' to these authors.",
-			"A: And would you mind tell me some technical information about this game?",
-			"Y: Not at all. This game is based on HTML5 and HTML5 game engine lufylegend.js.",
-			"A: Oh~ That's interesting."
+			"Me pregunto quién es el programador de este juego.?",
+			"R: Somos Itaas Develop Colombia,",
+			"agencia de desarrollo con mas de 3 años de experiencia",
+			"Quieres un juego o una aplicacion",
+			"Escribenos +57 312 367 7063"
 		];
 
 		for (var k = 0; k < txtList.length; k++) {
@@ -87,7 +85,7 @@ var ytAboutLayer = (function () {
 		var backTxt = new LTextField();
 		backTxt.color = "white";
 		backTxt.size = 20;
-		backTxt.text = "Back to Menu";
+		backTxt.text = "Volver a el Menu ";
 		backTxt.weight = "bold";
 		var backBtn = new ytButton(2, [backTxt, "center", "middle"], [0.6, 0.6]);
 		backBtn.x = (LGlobal.width - backBtn.getWidth()) * 0.5;
@@ -99,6 +97,7 @@ var ytAboutLayer = (function () {
 			s.remove();
 		});
 	};
+	
 
 	return ytAboutLayer;
 })();

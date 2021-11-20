@@ -19,7 +19,7 @@ var ytHelpLayer = (function () {
 
 	ytHelpLayer.prototype.addHelpTxt = function () {
 		var s = this,
-		t = "Tap the X part of the screen to make the car move to the X road. \n \n (X ∈ {left, right}) \n \n Do I make sense?",
+		t = "Toque la parte izquierda o derecha de la pantalla para hacer que la moto se mueva a la carretera izquierda o derecha.\nComparte tu puntaje y participa en el gran premio semanal",
 		tl = t.split(" ");
 
 		var helpTxt = new LTextField();
@@ -60,7 +60,7 @@ var ytHelpLayer = (function () {
 		var okTxt = new LTextField();
 		okTxt.color = "white";
 		okTxt.size = 20;
-		okTxt.text = "Ok, I know~";
+		okTxt.text = "Ok, Entendido";
 		okTxt.weight = "bold";
 		var okBtn = new ytButton(2, [okTxt, "center", "middle"], [0.6, 0.6]);
 		okBtn.x = (LGlobal.width - okBtn.getWidth()) * 0.5;

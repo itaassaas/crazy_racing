@@ -5,7 +5,7 @@ var ytStreetView = (function () {
 
 		s.place = place;
 		
-		s.speed = 0;
+		s.speed = 10;
 
 		s.initY = -300;
 

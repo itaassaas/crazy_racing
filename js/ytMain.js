@@ -43,6 +43,7 @@ function loadGame () {
 			{path : "./js/ytResultBox.js"},
 			{path : "./js/ytHelpLayer.js"},
 			{path : "./js/ytAboutLayer.js"},
+			{path : "./js/ytWhatsapp.js"},
 
 			{name : "button_sheet", path : "./images/button_sheet.jpg"},
 			{name : "menu_car_icons", path : "./images/menu_car_icons.png"},
@@ -123,4 +124,11 @@ function addHelpInterface() {
 function addAboutInterface() {
 	var aboutInterface = new ytAboutLayer();
 	addChild(aboutInterface);
+}
+function addWhatsapp() {
+
+	var Whatsapp = new ytWhatsapp();
+	addChild(Whatsapp);
+           
+        
 }

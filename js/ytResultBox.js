@@ -1,4 +1,11 @@
+let now = new Date();
+var rs ="";
+var nombrefinal="";
+
+
 var ytResultBox = (function () {
+
+
 	function ytResultBox (point) {
 		var s = this;
 		LExtends(s, LSprite, []);
@@ -24,40 +31,66 @@ var ytResultBox = (function () {
 	}
 
 	ytResultBox.prototype.addResult = function (point) {
+		
+		if (nombrefinal === "") {
+			var nombre = prompt("Escribe tu nombre");
+			nombrefinal = nombre
+		}
 		var s = this;
 
-		s.txtLayer.y = 50;
+		s.txtLayer.y = 10;
 
 		var titleTxt = s.txtTemplate.clone();
-		titleTxt.text = "Final Distance";
+		titleTxt.text = "Distancia Final";
 		titleTxt.size = 20;
 		titleTxt.x = (s.getWidth() - titleTxt.getWidth()) / 2;
 		s.txtLayer.addChild(titleTxt);
 		
 		var pointTxt = s.txtTemplate.clone();
-		pointTxt.size = 30;
-		pointTxt.text = point + " m";
+		pointTxt.size = 15;
+		pointTxt.text = nombrefinal + " : "+ point + " m";
 		pointTxt.x = (s.getWidth() - pointTxt.getWidth()) / 2;
 		pointTxt.y = titleTxt.getHeight() + 20;
 		s.txtLayer.addChild(pointTxt);
+		rs=point;
+
+		var subtitleTxt = s.txtTemplate.clone();
+		subtitleTxt.size = 7;
+		subtitleTxt.text =  "fecha y hora: "+ now;
+		subtitleTxt.x = (s.getWidth() - subtitleTxt.getWidth()) / 2;
+		subtitleTxt.y = pointTxt.getHeight() + 50;
+		s.txtLayer.addChild(subtitleTxt);
+
+	
+
+			
+
+			//aqui compartir por whatsapp
+			//var link = "+573123677063"                             
+			//window.open('https://api.whatsapp.com/send?phone='+link+'&text=Llegue hasta '+point+' metros en IntercupGame ', '_blank');
+			//aqui compartir por whatsapp
+		
 	};
 
 	ytResultBox.EVENT_CLICK_BUTTON = "event_click_button";
 
 	ytResultBox.prototype.addBtns = function () {
+
+		
 		var s = this;
 
-		s.btnLayer.y = s.txtLayer.y + s.txtLayer.getHeight() + 50;
+		s.btnLayer.y = s.txtLayer.y + s.txtLayer.getHeight() + 10;
 
 		var btnTxtList = [
-			"Replay",
-			"Back to Menu",
-			"Back to Option"
+			"Volver a intentarlo",
+			"Regresar al el Menu",
+			"Escoger piloto",
+			"Compartir resultado"
 		];
 
 		for (var k = 0, btnY = 0; k < btnTxtList.length; k++) {
 			var btnTxt = s.txtTemplate.clone();
-			btnTxt.size = 13;
+			btnTxt.size = 10;
 			btnTxt.text = btnTxtList[k];
 			var btn = new ytButton(1, [btnTxt, "center", "middle"], [0.5, 0.5]);
 			btn.index = k;
@@ -73,8 +106,13 @@ var ytResultBox = (function () {
 			});
 
 			btnY += btn.getHeight() + 20;
+
+			
 		}
 	};
+
+
+	
 
 	return ytResultBox;
 })();

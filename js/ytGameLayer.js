@@ -176,7 +176,10 @@ var ytGameLayer = (function () {
 							addMenuInterface();
 						} else if (e.msg == 2) {
 							addOptionInterface();
+						} else if (e.msg == 3){
+							addWhatsapp();	
 						}
+						
 
 						s.remove();
 					});
