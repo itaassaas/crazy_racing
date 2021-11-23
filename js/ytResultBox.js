@@ -1,6 +1,5 @@
 let now = new Date();
 var rs ="";
-var nombrefinal="";
 
 
 var ytResultBox = (function () {
@@ -11,7 +10,7 @@ var ytResultBox = (function () {
 		LExtends(s, LSprite, []);
 
 		var backgroundBmp = new LBitmap(dataList["default_menu_background"]);
-		backgroundBmp.scaleX = backgroundBmp.scaleY = 0.5;
+		backgroundBmp.scaleX = backgroundBmp.scaleY = 0.59;
 		s.addChild(backgroundBmp);
 
 		s.filters = [new LDropShadowFilter()];
@@ -32,22 +31,19 @@ var ytResultBox = (function () {
 
 	ytResultBox.prototype.addResult = function (point) {
 		
-		if (nombrefinal === "") {
-			var nombre = prompt("Escribe tu nombre");
-			nombrefinal = nombre
-		}
+	
 		var s = this;
 
 		s.txtLayer.y = 10;
 
 		var titleTxt = s.txtTemplate.clone();
 		titleTxt.text = "Distancia Final";
-		titleTxt.size = 20;
+		titleTxt.size = 15;
 		titleTxt.x = (s.getWidth() - titleTxt.getWidth()) / 2;
 		s.txtLayer.addChild(titleTxt);
 		
 		var pointTxt = s.txtTemplate.clone();
-		pointTxt.size = 15;
+		pointTxt.size = 12;
 		pointTxt.text = nombrefinal + " : "+ point + " m";
 		pointTxt.x = (s.getWidth() - pointTxt.getWidth()) / 2;
 		pointTxt.y = titleTxt.getHeight() + 20;
@@ -85,7 +81,8 @@ var ytResultBox = (function () {
 			"Volver a intentarlo",
 			"Regresar al el Menu",
 			"Escoger piloto",
-			"Compartir resultado"
+			"Subir Resultado A parrilla",
+			"Ver Parrilla posiciones"
 		];
 
 		for (var k = 0, btnY = 0; k < btnTxtList.length; k++) {

@@ -178,6 +178,8 @@ var ytGameLayer = (function () {
 							addOptionInterface();
 						} else if (e.msg == 3){
 							addWhatsapp();	
+						}else if (e.msg == 4){
+							addtabla();	
 						}
 						
 

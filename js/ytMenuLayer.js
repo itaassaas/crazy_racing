@@ -12,7 +12,13 @@ var ytMenuLayer = (function () {
 		s.addChild(s.btnLayer);
 
 		s.addBtns()
+
 	}
+	
+	ytMenuLayer.prototype.addEventListener = (function(){
+		var documento2 = prompt("Escribe tu documento");
+
+	});
 
 	ytMenuLayer.prototype.addBtns = function () {
 		var s = this;
@@ -24,6 +30,8 @@ var ytMenuLayer = (function () {
 		txtTemplate.filters = [new LDropShadowFilter(null, null, "white", 15)];
 
 		var btnList = ["INICIO", "AYUDA", "ACERCA DE"];
+
+
 
 		for (var k = 0; k < btnList.length; k++) {
 			var t = btnList[k];
@@ -59,6 +67,8 @@ var ytMenuLayer = (function () {
 		s.btnLayer.x = (LGlobal.width - s.btnLayer.getWidth()) * 0.5;
 		s.btnLayer.y = (LGlobal.height - s.btnLayer.getHeight()) * 0.5;
 	};
+
+
 
 	return ytMenuLayer;
 })();

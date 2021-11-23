@@ -1,3 +1,6 @@
+var documentof ="";
+var nombrefinal="";
+
 var ytWhatsapp = (function () {
 	function ytWhatsapp () {
 		var s = this;
@@ -15,9 +18,46 @@ var ytWhatsapp = (function () {
 	ytWhatsapp.prototype.addEventListener = (function(){
 		//aqui compartir por whatsapp
 		var link = "+573123677063";                             
-		window.open('https://api.whatsapp.com/send?phone='+link+'&text=Llegue hasta '+rs+' metros en IntercupCalleGame '+now, '_blank');
+		//window.open('https://api.whatsapp.com/send?phone='+link+'&text=Llegue hasta '+rs+' metros en IntercupCalleGame '+now, '_blank');
 		//aqui compartir por whatsapp
-	})	
+
+			
+		if (documentof === "") {
+			var documento = prompt("Escribe tu documento");
+			documentof = documento;
+		}
+		if (nombrefinal === "") {
+			var nombre = prompt("Escribe tu nombre");
+			nombrefinal = nombre
+		}
+
+		$.ajax({
+			
+			method: 'post',
+			url: 'enviodatosjuego.php',
+			// estas son las variables que querés pasar a PHP
+			// donde el "key" es el nombre que va a recibir
+			data: {puntaje: rs, nombre: nombrefinal,documento: documentof},
+			// esta función se llama cuando termina de procesar el
+			// request y utiliza el response para obtener la data
+			// que se imprimió desde PHP
+			success: function(response) {
+			  console.log(response);
+			}
+		  });
+
+		  window.alert("Registro cargado!");
+
+		 
+		 // if (window.confirm("Deseas ver la parrilla de posiiones?")) {
+			//window.open("tabla.php", "Thanks for Visiting!");
+		  //}
+
+		  
+
+	});	
+	
+
 
 	ytWhatsapp.prototype.addBtns = function () {
 
@@ -59,3 +99,4 @@ var ytWhatsapp = (function () {
 		
 	return ytWhatsapp;
 })();
+

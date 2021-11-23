@@ -44,6 +44,7 @@ function loadGame () {
 			{path : "./js/ytHelpLayer.js"},
 			{path : "./js/ytAboutLayer.js"},
 			{path : "./js/ytWhatsapp.js"},
+			{path : "./js/ytTabla.js"},
 
 			{name : "button_sheet", path : "./images/button_sheet.jpg"},
 			{name : "menu_car_icons", path : "./images/menu_car_icons.png"},
@@ -132,3 +133,11 @@ function addWhatsapp() {
            
         
 }
+function addtabla() {
+
+	var tabla = new ytTabla();
+	addChild(tabla);
+           
+        
+}
+
