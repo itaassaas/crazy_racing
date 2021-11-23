@@ -32,7 +32,13 @@ echo "Connected successfully";
 			font-weight: 300;
 			line-height: 1.42em;
 			color:#A7A1AE;
-			background-color:Black;
+			background-image: url("https://interclubescolombia.com.co/io/wp-content/uploads/2021/11/ofaaaaaMesa-de-trabajo-1.png");
+			
+			height: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
 			}
 			
 
@@ -56,8 +62,9 @@ echo "Connected successfully";
 
 			h2 a {
 			font-weight: 700;
+			font-size: 15px;
 			text-transform: uppercase;
-			color: #FB667A;
+			color: white;
 			text-decoration: none;
 			}
 
@@ -68,7 +75,7 @@ echo "Connected successfully";
 				font-weight: bold;
 				font-size: 1em;
 			text-align: left;
-			color: #185875;
+			color: white;
 			}
 
 			.container td {
@@ -80,12 +87,13 @@ echo "Connected successfully";
 			}
 
 			.container {
+				
 				text-align: left;
 				overflow: hidden;
 				width: 80%;
 				margin: 0 auto;
-			display: table;
-			padding: 0 0 8em 0;
+				display: table;
+				padding: 20em 0 8em 0;
 			}
 
 			.container td, .container th {
@@ -96,16 +104,16 @@ echo "Connected successfully";
 
 			/* Background-color of the odd rows */
 			.container tr:nth-child(odd) {
-				background-color: #323C50;
+				background-color: #00000091;
 			}
 
 			/* Background-color of the even rows */
 			.container tr:nth-child(even) {
-				background-color: #2C3446;
+				background-color: #00000091;
 			}
 
 			.container th {
-				background-color: #1F2739;
+				background-color: #D10016EB;
 			}
 
 			.container td:first-child { color: #FB667A; }
@@ -151,10 +159,6 @@ echo "Connected successfully";
 </head>
 <body>
 
-<h1><span class="yellow">Parrilla de Posiciones</pan></h1>
-<h2>Interclubes Street Game</h2>
-
-<br>
 
 	<table  class="container" >
 	<thead>
@@ -192,7 +196,7 @@ echo "Connected successfully";
 	 ?>
 	</table>
 
-	<h2><a href="http://localhost/crazy_racing">Vover al juego</a></h2>
+	<h2 style="background-color: red "><a href="http://localhost/crazy_racing">Vover al juego</a></h2>
 
 
 	
